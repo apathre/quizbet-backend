@@ -1,13 +1,9 @@
 const mongoose=require('mongoose');
 
 const quizbetSchema=mongoose.Schema({
-    url:String,
-    channel:String,
-    song:String,
-    likes:String,
-    messages:String,
-    description:String,
-    shares:String
+    name:String,
+    state:String,
+    country:String
 });
 
 
