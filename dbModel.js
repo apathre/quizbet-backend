@@ -7,4 +7,4 @@ const quizbetSchema=mongoose.Schema({
 });
 
 
-module.exports=mongoose.model('tiktokVideos',quizbetSchema);
+module.exports=mongoose.model('countryData',quizbetSchema);
