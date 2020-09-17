@@ -1,10 +1,10 @@
 const mongoose=require('mongoose');
 
-const quizbetSchema=mongoose.Schema({
+const countryDataSchema=mongoose.Schema({
     name:String,
     state:String,
     country:String
 });
 
 
-module.exports=mongoose.model('countryData',quizbetSchema);
+module.exports=mongoose.model('countryData',countryDataSchema);
