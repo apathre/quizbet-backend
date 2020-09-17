@@ -4,6 +4,9 @@ const countryDataSchema=new mongoose.Schema({
     name:String,
     state:String,
     country:String
+},
+{
+    collection:"countryData"
 });
 
 
