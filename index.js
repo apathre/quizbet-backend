@@ -25,8 +25,16 @@ app.use((req,res,next)=>{
 // Catch unauthorised errors
 app.use(middleware.errorHandler);
 
-
-app.post('/addData',async (req,res)=>{
+app.get('/v1/addData',(req,res)=>{
+    ddData.find((err,data)=>{
+        if(err){
+            res.status(500).send(err);
+        }else{
+            res.status(200).send(data);
+        }
+    })
+})
+app.post('/v2/addData',(req,res)=>{
     const data = {
     name: req.data.name,
     state: req.data.state,
