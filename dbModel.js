@@ -1,6 +1,6 @@
 const mongoose=require('mongoose');
 
-const countryDataSchema=mongoose.Schema({
+const countryDataSchema=new mongoose.Schema({
     name:String,
     state:String,
     country:String
