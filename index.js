@@ -36,9 +36,9 @@ app.get('/v1/addData',(req,res)=>{
 })
 app.post('/v2/addData',(req,res)=>{
     const data = {
-    name: req.data.name,
-    state: req.data.state,
-    country: req.data.country
+    name: req.name,
+    state: req.state,
+    country: req.country
     };
     // Add a new document in collection "cities" with ID 'LA'
     ddData.create(data,(err,data)=>{
