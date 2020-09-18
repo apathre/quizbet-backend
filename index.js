@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const cors=require('cors');
+const bodyParser=require('body-parser');
 const middleware=require('./middleware/middleware');
 const mongoose = require('mongoose');
 const ddData=require('./dbModel');
@@ -14,7 +15,8 @@ mongoose.connect(connection_url,{
 });
 
 
-app.use(express.json());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:true}));
 app.use(cors({origin:true}));
 app.use((req,res,next)=>{
     res.setHeader('Access-Control-Allow-Origin','*'),
