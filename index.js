@@ -5,7 +5,7 @@ const bodyParser=require('body-parser');
 const middleware=require('./middleware/middleware');
 const mongoose = require('mongoose');
 const ddData=require('./dbModel');
-const connection_url=`mongodb+srv://apathre:${process.env.MNDBP}@cluster0.tlbkx.mongodb.net/countryData?retryWrites=true&w=majority`;
+const connection_url=`mongodb+srv://apathre:a09SVlQpntf3WXSD@cluster0.tlbkx.mongodb.net/countryData?retryWrites=true&w=majority`;
 
 
 mongoose.connect(connection_url,{
