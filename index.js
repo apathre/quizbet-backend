@@ -43,14 +43,14 @@ app.post('/v2/addData',(req,res)=>{
     "country": req.country
     };
     // Add a new document in collection "cities" with ID 'LA'
-    ddData.save(data,(err,data)=>{
-        if(err){
-            res.status(500).send(err)
-        }
-        else{
-            res.status(200).send(data)
-        }
+    var nData=new ddData(req.body);
+    nData.save()
+    .then(item=>{
+        res.status(200).send(item);
     })
+    .catch(err=>{
+            res.status(500).send(err)
+        })
 })
 
 app.get('/', (req, res) => {
